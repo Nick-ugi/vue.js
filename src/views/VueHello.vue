@@ -34,6 +34,7 @@ export default {
           {'이름' : '김홍석','번호':'3','나이':'30'}
         ]
       },
+      //변수 초기화,
         testName:'',
         testNum:'',
         testAge:''
@@ -62,7 +63,8 @@ export default {
         var keys = []
         for (let i = 0; i < res.data.length; i++) {
           const key = res.data[i];
-          keys.push({
+          keys.push({  // keys에 데이터 삽입, keys 에는, key.data(변수명에 맞는 데이터)가 들어감
+
             'userId': key.userId,
             'id': key.id,
             'title': key.title,
@@ -71,7 +73,7 @@ export default {
         }
         // 헤더 설정
         this.gridData.header = ['userId', 'id', 'title', 'completed'];
-        // rows 업데이트
+        // rows 설정
         this.gridData.rows = keys;
       }
     })
